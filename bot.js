@@ -20,7 +20,7 @@ client.on('message', async message => {
     if(message.content.toLowerCase() === '!verify' && message.channel.id === '746423667411648573')
     {   
         await message.delete().catch(err => console.log(err));
-        const role = message.guild.roles.cache.get('● Zweryfikowany');
+        const role = message.guild.roles.cache.get('Zweryfikowany');
         if(role) {
             try {
                 await message.member.roles.add(role);
