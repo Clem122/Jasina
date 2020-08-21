@@ -17,13 +17,13 @@ client.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.id === '')
         await message.delete();
-    if(message.content.toLowerCase() === '!verify' && message.channel.id === '746387780460085409')
+    if(message.content.toLowerCase() === '!verify' && message.channel.id === '7463877802460085409')
     {   
         await message.delete().catch(err => console.log(err));
-        const role = message.guild.roles.cache.get('');
+        const role = message.guild.roles.cache.get('● Zweryfikowany');
         if(role) {
             try {
-                await message.member.roles.add(rol);
+                await message.member.roles.add(role);
                 console.log("● Nowy");
             }
             catch(err) {
