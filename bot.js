@@ -7,7 +7,9 @@ const snekfetch = require('snekfetch');
 const serverStats = {
     guildID: '746030108460056718',
     totalUsersID: '746082964839858247',
-    newUser: '746082991230419005'
+    clock: '746355735411294258',
+    time: '501863189458452480',
+    newUser: '499164704313442314'
 }
 
 client.on('guildMemberAdd', member => {
@@ -19,7 +21,33 @@ client.on('guildMemberAdd', member => {
 client.on('guildMemberRemove', member => {
     if (member.guild.id !== serverStats.guildID) return;
     client.channels.get(serverStats.totalUsersID).setName(`» Użytkowników: ${member.guild.memberCount}`);
-});﻿
+    client.channels.get(serverStats.memberCountID).setName(`» Ludzi: ${member.guild.members.filter(m => !m.user.bot).size}`);
+});
+
+client.on('ready', () => {
+    let autopisanko = "10s";
+    setInterval(function() {
+    client.channels.get(serverStats.clock).setName(`❰`);
+    client.channels.get(serverStats.clock).setName(`❰❰`);	    
+    client.channels.get(serverStats.clock).setName(`❰❰❰`);	    
+    client.channels.get(serverStats.clock).setName(`❰❰❰ W`);	   
+    client.channels.get(serverStats.clock).setName(`❰❰❰ WI`);
+    client.channels.get(serverStats.clock).setName(`❰❰❰ WIT`);	
+    client.channels.get(serverStats.clock).setName(`❰❰❰ WITA`);
+    client.channels.get(serverStats.clock).setName(`❰❰❰ WITAJ`);
+    client.channels.get(serverStats.clock).setName(`❰❰❰ WITAJ ❱`);
+    client.channels.get(serverStats.clock).setName(`❰❰❰ WITAJ ❱❱`);	
+    client.channels.get(serverStats.clock).setName(`❰❰❰ WITAJ ❱❱❱`);
+    client.channels.get(serverStats.clock).setName(`❰❰❰ WITAJ ❱❱❱`);
+    client.channels.get(serverStats.clock).setName(`❰❰❰ WITAJ ❱❱❱`);
+    client.channels.get(serverStats.clock).setName(`❰❰❰ N ❱❱❱`);
+    client.channels.get(serverStats.clock).setName(`❰❰❰ NA ❱❱❱`);
+    client.channels.get(serverStats.clock).setName(`❰❰❰ #TEAMBAKŁAŻAN ❱❱❱`);
+    client.channels.get(serverStats.clock).setName(`❰❰❰ #TEAMBAKŁAŻAN ❤️ ❱❱❱`);
+    client.channels.get(serverStats.clock).setName(`❰❰❰ #TEAMBAKŁAŻAN ❤️ ❱❱❱`);	
+    client.channels.get(serverStats.clock).setName(`❰❰❰ #TEAMBAKŁAŻAN ❤️ ❱❱❱`);	    	    
+}, 600);
+ });
 
 client.on("guildMemberAdd", member => {
     member.user.sendMessage(`Witaj na serwerze **#TeamBakłażan** :hand_splayed:\n\nZalecamy zapoznać się z kanałem **#zasady-info**\n\nJako serwer oferujemy miłą atmosfere jak i częste konkursy.\n\nCała administracja życzy dobrej zabawy :heart:\n\nhttps://discord.gg/bBVWbNd`);
