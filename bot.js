@@ -1,11 +1,16 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = "$";
+const fs = require("fs");
+const Canvas = require('canvas');
+const snekfetch = require('snekfetch');
 const serverStats = {
     guildID: '746030108460056718',
     totalUsersID: '746082964839858247',
     memberCountID: '746082991230419005',
-    newUser: '746087439856173179'
-};
+    clock: '746087399007977595',
+    newUser: '746087419371061339'
+}
 
 client.on('guildMemberAdd', member => {
     if (member.guild.id !== serverStats.guildID) return;
