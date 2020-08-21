@@ -24,22 +24,6 @@ client.on('guildMemberRemove', member => {
     client.channels.get(serverStats.totalUsersID).setName(`» Użytkowników: ${member.guild.memberCount}`);
 });
 
-client.on('ready', () => {
-    let autopisanko = "10s";
-    setInterval(function() {
-    client.channels.get(serverStats.clock).setName(`W`);
-    client.channels.get(serverStats.clock).setName(`W`);
-    client.channels.get(serverStats.clock).setName(`WI`);
-    client.channels.get(serverStats.clock).setName(`WI`);
-    client.channels.get(serverStats.clock).setName(`WIT`);
-    client.channels.get(serverStats.clock).setName(`WIT`);
-    client.channels.get(serverStats.clock).setName(`WITA`);
-    client.channels.get(serverStats.clock).setName(`WITA`);
-    client.channels.get(serverStats.clock).setName(`WITAJ`);
-    client.channels.get(serverStats.clock).setName(`WITAJ`);
-}, 600);
- });
-
 client.on("guildMemberAdd", member => {
     member.user.sendMessage(`Witaj na serwerze **#TeamBakłażan** :hand_splayed:\n\nZalecamy zapoznać się z kanałem **#zasady-info**\n\nJako serwer oferujemy miłą atmosfere jak i częste konkursy.\n\nCała administracja życzy dobrej zabawy :heart:\n\nhttps://discord.gg/bBVWbNd`);
 });
@@ -87,10 +71,24 @@ client.on('guildMemberAdd', async member => {
 	channel.send(`:eggplant: **${member}** **Właśnie dołączył na serwer! Zerknij do regulaminu i baw się dobrze** :eggplant:`, attachment);
 });
 
-client.on('message', (message) => {
-    if (message.content == 'ping') {
-        message.channel.sendMessage(`Pong! ${Date.now() - message.createdAt.getTime()}ms`);
-    }
+client.on('message', message => {
+  if (message.content === prefix + 'ping') {
+    message.channel.send({embed: {
+  color: 101981,
+  description: (':ping_pong:  `' + `${Date.now() - message.createdTimestamp}` + ' ms`'),
+  title: " ",
+  author: {
+  name: "Twój ping to", 
+  icon_url: message.author.avatarURL
+    },
+  image: {
+  "url": " ",
+    },
+  thumbnail: {
+  "url": " "
+    },
+}});
+  }
 });
 
 client.on('message', message => {
@@ -173,6 +171,100 @@ client.on('message', async message => {
 
  }
 
+});
+
+client.on("message", async message => {
+
+    if (message.author.bot) return;
+
+    if (message.content.indexOf(prefix) !== 0) return;
+    
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+
+    // Let's go with a few common example commands! Feel free to delete or change those.
+
+    if (command === "nigdytegoniezgadniesz913xdjg") {
+        // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
+        // To get the "message" itself we join the `args` back into a string with spaces: 
+        const sayMessage = args.join(" ");
+        // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+        message.delete().catch(O_o => { });
+        // And we get the bot to say the thing:
+        const embed = {
+            "title": "Hej! Zweryfikuj konto",
+            "description": `${sayMessage}`,
+            "color": 11041206
+        };
+        message.channel.send({ embed });
+}
+});
+
+client.on("message", async message => {
+
+    if (message.author.bot) return;
+
+    if (message.content.indexOf(prefix) !== 0) return;
+    
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+
+    // Let's go with a few common example commands! Feel free to delete or change those.
+
+    if (command === "ogloszenie") {
+        // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
+        // To get the "message" itself we join the `args` back into a string with spaces: 
+        const sayMessage = args.join(" ");
+        // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+        message.delete().catch(O_o => { });
+        // And we get the bot to say the thing:
+        const embed = {
+            "title": ":bell: OGŁOSZENIE",
+            "description": `${sayMessage}`,
+            "color": 16777215
+        };
+        message.channel.send({ embed });
+}
+});
+
+client.on('message', async message => {
+    if (message.content.startsWith('$clear')) {
+     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":potato: Nie masz uprawnien :) :potato:")
+        const args = message.content.slice(1).trim().split(/ +/g);
+        console.log(args);
+        const messagecount = parseInt(args[1], 10);
+        console.log(messagecount);
+        if (!messagecount || messagecount < 2 || messagecount > 200)
+            return message.reply('Minimalna liczba wyczyszczenia to 2');
+        let fetchmessage = await message.channel.fetchMessages({ count: messagecount });
+        message.channel.bulkDelete(messagecount)
+        message.channel.sendMessage("**Usunięto** "+messagecount)
+    }
+}); 
+
+client.on('message', message => {
+  if (message.content === prefix + 'info') {
+    message.channel.send({embed: {
+  color: 10721349,
+  description: (`Pełna nazwa ${message.author.username}\nTwoje ID: ${message.author.id}\nKonto stworzone: ${message.author.createdAt}`),
+  title: " ",
+  author: {
+  timestamp: new Date(),
+  footer: {
+  icon_url: client.user.avatarURL,
+  text: "© Example"
+    },
+  name: message.author.username, 
+  icon_url: message.author.avatarURL
+    },
+  image: {
+  "url": " ",
+    },
+  thumbnail: {
+  "url": message.author.avatarURL
+    },
+}});
+  }
 });
 
 client.on("ready", () => {
