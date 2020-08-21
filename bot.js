@@ -24,21 +24,20 @@ const shortcode = (n) => {
 client.on('guildMemberAdd', (member) => {
     if (member.user.bot || member.guild.id !== config.guild) return
     const token = shortcode(8)
-    const channelv = member.guild.channels.find(ch => ch.name === 'weryfikacja');
-    const welcomemsg = `Akceptuje regulamin. Mój token to ${token}`
+    const welcomemsg = `Welcome to the guild! We hope you find a home here! Check out the \`#general\` channel to make sure that we jive, and as long as our goals are similar, then there’s a place at the table waiting for you. \n\n If you accept the code of conduct, please verify your agreement by replying to **this DM** with the verification phrase: \n\n\`I agree to abide by all rules. My token is ${token}.\`\n\n **This message is case-sensitive, and please include the period at the end! ** \n\nQuestions? Get at a staff member in the server or via DM.`
+    console.log(`${member.user.username}#${member.user.discriminator} joined! CODE: "${token}"`)
     member.send(welcomemsg)
     member.user.token = token
 })
 
-const verifymsg = 'Akceptuje regulamin. Mój token to {token}'
+const verifymsg = '{token}'
 
 client.on('message', (message) => {
-	if (message.channel.name === "weryfikacja") {
-	  if (message.content === "{token}") {
-	  const verifyRole = message.guild.roles.find(`name`, `Zweryfikowany`);
-	  message.member.addRole(verifyRole);
-	  }};
-});
+    const verifyRole = message.guild.roles.find(`name`, `Zweryfikowany`);
+    if (message.channel.name === "weryfikacja") return
+    if (message.content !== (verifymsg.replace('{token}', message.author.token))) return
+    message.member.addRole(verifyRole);
+    })
 
 client.on('guildMemberAdd', member => {
     if (member.guild.id !== serverStats.guildID) return;
