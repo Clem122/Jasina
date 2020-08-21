@@ -71,7 +71,7 @@ process.on('uncaughtException', (err) => {
 const serverStats = {
     guildID: '746030108460056718',
     totalUsersID: '746082964839858247',
-    clock: '746036284568371242',
+    clock: '746474894442627254',
     newUser: '746082991230419005'
 }
 
@@ -310,6 +310,84 @@ client.on('message', message => {
 }});
   }
 });
+
+client.on('ready', () => {
+    let autopisanko = "10s";
+    setInterval(function() {
+    client.channels.get(serverStats.clock).setName(`W`);
+    client.channels.get(serverStats.clock).setName(`W`);
+    client.channels.get(serverStats.clock).setName(`WI`);
+    client.channels.get(serverStats.clock).setName(`WI`);
+    client.channels.get(serverStats.clock).setName(`WIT`);
+    client.channels.get(serverStats.clock).setName(`WIT`);
+    client.channels.get(serverStats.clock).setName(`WITA`);
+    client.channels.get(serverStats.clock).setName(`WITA`);
+    client.channels.get(serverStats.clock).setName(`WITAJ`);
+    client.channels.get(serverStats.clock).setName(`WITAJ`);
+    client.channels.get(serverStats.clock).setName(`WITAJ N`);
+    client.channels.get(serverStats.clock).setName(`WITAJ N`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <-`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <-`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <--`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <--`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <--`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <--`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <-`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <-`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA <`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA`);
+    client.channels.get(serverStats.clock).setName(`WITAJ NA`);
+    client.channels.get(serverStats.clock).setName(`WITAJ N`);
+    client.channels.get(serverStats.clock).setName(`WITAJ N`);
+    client.channels.get(serverStats.clock).setName(`WITAJ`);
+    client.channels.get(serverStats.clock).setName(`WITAJ`);
+    client.channels.get(serverStats.clock).setName(`WITA`);
+    client.channels.get(serverStats.clock).setName(`WITA`);
+    client.channels.get(serverStats.clock).setName(`WIT`);
+    client.channels.get(serverStats.clock).setName(`WIT`);
+    client.channels.get(serverStats.clock).setName(`WI`);
+    client.channels.get(serverStats.clock).setName(`WI`);
+    client.channels.get(serverStats.clock).setName(`W`);
+    client.channels.get(serverStats.clock).setName(`W`);
+    client.channels.get(serverStats.clock).setName(`#`);
+    client.channels.get(serverStats.clock).setName(`#`);
+    client.channels.get(serverStats.clock).setName(`#T`);
+    client.channels.get(serverStats.clock).setName(`#T`);
+    client.channels.get(serverStats.clock).setName(`#TE`);
+    client.channels.get(serverStats.clock).setName(`#TE`);
+    client.channels.get(serverStats.clock).setName(`#TEA`);
+    client.channels.get(serverStats.clock).setName(`#TEA`);
+    client.channels.get(serverStats.clock).setName(`#TEAM`);
+    client.channels.get(serverStats.clock).setName(`#TEAM`);
+    client.channels.get(serverStats.clock).setName(`#TEAMB`);
+    client.channels.get(serverStats.clock).setName(`#TEAMB`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBA`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBA`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAK`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAK`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAKŁ`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAKŁ`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAKŁA`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAKŁA`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAKŁAŻ`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAKŁAŻ`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAKŁAŻA`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAKŁAŻA`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAKŁAŻAN`);
+    client.channels.get(serverStats.clock).setName(`#TEAMBAKŁAŻAN`);
+    client.channels.get(serverStats.clock).setName(`#̲T̲E̲A̲M̲B̲A̲K̲Ł̲A̲Ż̲A̲N̲`);
+    client.channels.get(serverStats.clock).setName(`#̲T̲E̲A̲M̲B̲A̲K̲Ł̲A̲Ż̲A̲N̲`);
+    client.channels.get(serverStats.clock).setName(`#̲T̲E̲A̲M̲B̲A̲K̲Ł̲A̲Ż̲A̲N̲ ❤`);
+    client.channels.get(serverStats.clock).setName(`#̲T̲E̲A̲M̲B̲A̲K̲Ł̲A̲Ż̲A̲N̲ ❤`);
+    client.channels.get(serverStats.clock).setName(`#̲T̲E̲A̲M̲B̲A̲K̲Ł̲A̲Ż̲A̲N̲ ❤`);
+    client.channels.get(serverStats.clock).setName(`#̲T̲E̲A̲M̲B̲A̲K̲Ł̲A̲Ż̲A̲N̲ ❤`);
+}, 600);
+ });
 
 client.on("ready", () => {
     client.user.setStatus("dnd");
