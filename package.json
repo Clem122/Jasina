@@ -1,14 +1,21 @@
 {
   "name": "jasina",
   "version": "1.0.0",
-  "description": "",
-  "main": "bot.js",
+  "description": "JD",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurenah/first-discord-bot.git"
+  },
+  "author": "olekkosa",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurenah/first-discord-bot/issues"
+  },
+  "homepage": "https://github.com/laurenah/first-discord-bot#readme",
   "dependencies": {
     "discord.js": "^12.3.1",
     "node-fetch": "^2.6.0"
