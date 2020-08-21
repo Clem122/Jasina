@@ -8,7 +8,7 @@ const serverStats = {
     guildID: '746030108460056718',
     totalUsersID: '746082964839858247',
     clock: '746355735411294258',
-    newUser: '499164704313442314'
+    newUser: '746082991230419005'
 }
 
 client.on('guildMemberAdd', member => {
