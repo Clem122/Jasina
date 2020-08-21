@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "$";
 const fs = require("fs");
+const config = require('./config.json')
 const ms = require("ms");
 const Canvas = require('canvas');
 const snekfetch = require('snekfetch');
