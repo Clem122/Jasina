@@ -25,7 +25,7 @@ client.on('guildMemberRemove', member => {
     client.channels.get(serverStats.totalUsersID).setName(`» Użytkowników: ${member.guild.memberCount}`);
     client.channels.get(serverStats.memberCountID).setName(`» Ludzi: ${member.guild.members.filter(m => !m.user.bot).size}`);
     client.channels.get(serverStats.botCount).setName(`» Botów: ${member.guild.members.filter(m => m.user.bot).size}`)
-});
+});﻿
 
 client.on('message', (message) => {
     if (message.content == 'ping') {
