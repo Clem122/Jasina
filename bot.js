@@ -29,6 +29,7 @@ client.on('ready', () => {
     client.channels.get(serverStats.clock).setName(`❰`);	    
     client.channels.get(serverStats.clock).setName(`❰❰`);	
     client.channels.get(serverStats.clock).setName(`❰❰`);	    
+    client.channels.get(serverStats.clock).setName(`❰❰ddd`);	    
     client.channels.get(serverStats.clock).setName(`❰❰❰`);
     client.channels.get(serverStats.clock).setName(`❰❰❰`);		    
     client.channels.get(serverStats.clock).setName(`❰❰❰ W`);
