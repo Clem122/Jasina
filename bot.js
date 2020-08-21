@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "$";
 const fs = require("fs");
-const config = require('./config.json')
 const ms = require("ms");
 const Canvas = require('canvas');
 const snekfetch = require('snekfetch');
@@ -14,8 +13,6 @@ const serverStats = {
     clock: '746036284568371242',
     newUser: '746082991230419005'
 }
-
-const completemsg = `d**\n`
 
 const shortcode = (n) => {
     const possible = 'ABCDEFGHIJKLMNPQRSTUVWXYZabcdefghjklmnopqrstuvwxyz0123456789'
@@ -29,30 +26,19 @@ client.on('guildMemberAdd', (member) => {
     const token = shortcode(8)
     const channelv = member.guild.channels.find(ch => ch.name === 'weryfikacja');
     const welcomemsg = `Akceptuje regulamin. Mój token to ${token}`
-    console.log(`${member.user.username}#${member.user.discriminator} joined! CODE: "${token}"`)
-    channelv.send(welcomemsg)
+    member.send(welcomemsg)
     member.user.token = token
 })
 
 const verifymsg = 'Akceptuje regulamin. Mój token to {token}'
 
 client.on('message', (message) => {
-    if (message.author.bot || !message.author.token || message.channel.type !== `dm`) return
-    if (message.content !== (verifymsg.replace('{token}', message.author.token))) return
-    message.channelv.send({
-        embed: {
-            color: Math.floor(Math.random() * (0xFFFFFF + 1)),
-            description: completemsg,
-            timestamp: new Date(),
-            footer: {
-                text: `Weryfikacja przebiegła pomyślnie`
-            }
-        }
-    })
-    client.guilds.get(config.guild).member(message.author).roles.add(config.role) // ensure this is a string in the config ("")
-        .then(console.log(`TOKEN: ${message.author.token} :: Role ${config.role} added to member ${message.author.id}`))
-        .catch(console.error)
-})
+	if (message.channel.name === "weryfikacja") {
+	  if (message.content === "{token}") {
+	  const verifyRole = message.guild.roles.find(`name`, `Zweryfikowany`);
+	  message.member.addRole(verifyRole);
+	  }};
+});
 
 client.on('guildMemberAdd', member => {
     if (member.guild.id !== serverStats.guildID) return;
