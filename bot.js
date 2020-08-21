@@ -283,6 +283,20 @@ if (command == "warn") {
 
 });
 
+client.on('message', async message => {
+
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+  let command = message.content.split(" ")[0];
+
+    if (message.channel.id === '746387780460085409')
+    if (command) {
+    message.delete(800)
+
+ }
+
+});
+
 client.on("ready", () => {
     client.user.setStatus("dnd");
 });
