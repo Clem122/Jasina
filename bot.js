@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const bot = new Discord.Client();
 const prefix = "$";
 
-bot.on('ready',() =>{
+client.on('ready',() =>{
     console.log('Siema pizdo');  
 })
 
