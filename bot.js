@@ -19,8 +19,6 @@ const shortcode = (n) => {
     return text;
 }
 
-const client = new Discord.Client()
-
 client.on('guildMemberAdd', (member) => {
     if (member.user.bot || member.guild.id !== config.guild) return
     const token = shortcode(8)
