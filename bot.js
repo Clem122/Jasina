@@ -38,7 +38,8 @@ client.on('message', (message) => {
             }
         }
     })
-    client.guilds.get(config.guild).member(message.author).roles.add(config.role) // ensure this is a string in the config ("")
+    var role = message.guild.roles.find(role => role.name === "Zweryfikowany");
+    message.member.addRole(role);
         .then(console.log(`TOKEN: ${message.author.token} :: Role ${config.role} added to member ${message.author.id}`))
         .catch(console.error)
 })
