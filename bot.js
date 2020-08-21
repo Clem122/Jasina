@@ -30,7 +30,7 @@ client.on('guildMemberAdd', (member) => {
     member.user.token = token
 })
 
-const verifymsg = 'I agree to abide by all rules. My token is {token}.'
+const verifymsg = '{token}'
 
 client.on('message', (message) => {
     if (message.author.bot || !message.author.token || message.channel.type !== `dm`) return
