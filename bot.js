@@ -17,7 +17,7 @@ client.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.id === '')
         await message.delete();
-    if(message.content.toLowerCase() === '!verify' && message.channel.id === '7463877802460085409')
+    if(message.content.toLowerCase() === '!verify' && message.channel.id === '746423667411648573')
     {   
         await message.delete().catch(err => console.log(err));
         const role = message.guild.roles.cache.get('● Zweryfikowany');
@@ -185,7 +185,7 @@ client.on('message', async message => {
   if(message.channel.type === "dm") return;
   let command = message.content.split(" ")[0];
 
-    if (message.channel.id === '746387780460085409')
+    if (message.channel.id === '746423667411648573')
     if (command) {
     message.delete(800)
 
