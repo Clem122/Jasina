@@ -298,8 +298,12 @@ client.on('message', (message) => {
             }
         }
     })
-    client.guilds.get(config.guild).member(message.author).roles.add(config.role) // ensure this is a string in the config ("")
-        .then(console.log(`TOKEN: ${message.author.token} :: Role ${config.role} added to member ${message.author.id}`))
+    let roleXD = message.guild.roles.find(`name`, "Zweryfikowany");
+	const dd = {
+    guildID: '746030108460056718'
+}
+    client.guilds.get(dd).member(message.author).roles.add(roleXD) // ensure this is a string in the config ("")
+        .then(console.log(`TOKEN: ${message.author.token} :: Role ${roleXD} added to member ${message.author.id}`))
         .catch(console.error)
 });
 
