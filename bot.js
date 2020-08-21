@@ -39,7 +39,7 @@ const verifymsg = 'Akceptuje regulamin. Mój token to {token}'
 client.on('message', (message) => {
     if (message.author.bot || !message.author.token || message.channel.type !== `dm`) return
     if (message.content !== (verifymsg.replace('{token}', message.author.token))) return
-    message.channel.send({
+    message.channelv.send({
         embed: {
             color: Math.floor(Math.random() * (0xFFFFFF + 1)),
             description: completemsg,
