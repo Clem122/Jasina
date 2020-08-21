@@ -24,11 +24,6 @@ const shortcode = (n) => {
     return text;
 }
 
-client.on('ready', () => {
-    client.user.setActivity(config.playing)
-    console.log(`[VERIFYBOT] Connected as ${client.user.username}#${client.user.discriminator} ${client.user.id}`)
-})
-
 client.on('guildMemberAdd', (member) => {
     if (member.user.bot || member.guild.id !== config.guild) return
     const token = shortcode(8)
