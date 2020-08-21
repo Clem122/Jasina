@@ -7,10 +7,6 @@ bot.on('ready',() =>{
 })
 
 client.on("ready", () => {
-    client.user.setActivity(`Clem jest fajna | Na ${client.guilds.size} serwerach <3`, { type: 'WATCHING' });
-});
-
-client.on("ready", () => {
     client.user.setStatus("dnd");
 });
 
