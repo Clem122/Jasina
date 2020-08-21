@@ -7,7 +7,7 @@ const snekfetch = require('snekfetch');
 const serverStats = {
     guildID: '746030108460056718',
     totalUsersID: '746082964839858247',
-    clock: '746355735411294258',
+    clock: '746363233816018946',
     newUser: '746082991230419005'
 }
 
