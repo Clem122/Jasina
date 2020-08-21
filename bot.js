@@ -38,10 +38,8 @@ client.on('message', (message) => {
             }
         }
     })
-    var role = message.guild.roles.find(role => role.name === "Zweryfikowany");
-    message.member.addRole(role);
-        .then(console.log(`TOKEN: ${message.author.token} :: Role ${config.role} added to member ${message.author.id}`))
-        .catch(console.error)
+var role= member.guild.roles.cache.find(role => role.name === "Zweryfikowany");
+member.roles.add(role);
 })
 
 client.on('disconnect', (event) => {
