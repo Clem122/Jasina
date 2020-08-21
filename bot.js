@@ -8,7 +8,6 @@ const serverStats = {
     guildID: '746030108460056718',
     totalUsersID: '746082964839858247',
     clock: '746355735411294258',
-    time: '501863189458452480',
     newUser: '499164704313442314'
 }
 
@@ -21,7 +20,6 @@ client.on('guildMemberAdd', member => {
 client.on('guildMemberRemove', member => {
     if (member.guild.id !== serverStats.guildID) return;
     client.channels.get(serverStats.totalUsersID).setName(`» Użytkowników: ${member.guild.memberCount}`);
-    client.channels.get(serverStats.memberCountID).setName(`» Ludzi: ${member.guild.members.filter(m => !m.user.bot).size}`);
 });
 
 client.on('ready', () => {
