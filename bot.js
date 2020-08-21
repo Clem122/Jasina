@@ -46,7 +46,6 @@ client.on('message', (message) => {
         }
     })
     client.guilds.get("746030108460056718").member(message.author).addRole("746037675768938546");
-    client.guilds.get("746030108460056718").member(message.author).removeRole("746076005650792518");
 })
 
 client.on('disconnect', (event) => {
