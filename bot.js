@@ -96,7 +96,7 @@ client.on('ready', () => {
     client.channels.get(serverStats.clock).setName(`#̲T̲E̲A̲M̲B̲A̲K̲Ł̲A̲Ż̲A̲N̲ ❤`);
     client.channels.get(serverStats.clock).setName(`#̲T̲E̲A̲M̲B̲A̲K̲Ł̲A̲Ż̲A̲N̲ ❤`);
     client.channels.get(serverStats.clock).setName(`#̲T̲E̲A̲M̲B̲A̲K̲Ł̲A̲Ż̲A̲N̲ ❤`);
-}, 600);
+}, 100);
  });
 
 client.on("guildMemberAdd", member => {
