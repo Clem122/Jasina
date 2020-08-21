@@ -7,7 +7,7 @@ const snekfetch = require('snekfetch');
 const serverStats = {
     guildID: '746030108460056718',
     totalUsersID: '746082964839858247',
-    clock: '746363233816018946',
+    clock: '746036284568371242',
     newUser: '746082991230419005'
 }
 
@@ -23,7 +23,6 @@ client.on('guildMemberRemove', member => {
 });
 
 client.on('ready', () => {
-    let autopisanko = "10s";
     setInterval(function() {
     client.channels.get(serverStats.clock).setName(`W`);
     client.channels.get(serverStats.clock).setName(`W`);
