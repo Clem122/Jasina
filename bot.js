@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const fetch = require('node-fetch');
-const bot = new Discord.Client();
 const prefix = "$";
 
 client.on('ready',() =>{
