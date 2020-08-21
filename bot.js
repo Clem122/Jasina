@@ -28,7 +28,7 @@ client.on('guildMemberAdd', (member) => {
     if (member.user.bot || member.guild.id !== config.guild) return
     const token = shortcode(8)
     const channelv = member.guild.channels.find(ch => ch.name === 'weryfikacja');
-    const welcomemsg = `gowno`
+    const welcomemsg = `Akceptuje regulamin. Mój token to ${token}`
     console.log(`${member.user.username}#${member.user.discriminator} joined! CODE: "${token}"`)
     channelv.send(welcomemsg)
     member.user.token = token
