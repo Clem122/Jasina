@@ -1,15 +1,10 @@
 const Discord = require('discord.js');
-const fetch = require('node-fetch');
-const prefix = "$";
-var express = require ('express');
-var moment = require('moment');
+const bot = new Discord.Client();
 
-client.on('ready',() =>{
-    console.log('Siema pizdo');  
-})
-
-client.on("ready", () => {
-    client.user.setStatus("dnd");
+bot.on('message', (message) => {
+    if (message.content == 'ping') {
+        message.channel.sendMessage(`Pong! ${Date.now() - message.createdAt.getTime()}ms`);
+    }
 });
 
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
