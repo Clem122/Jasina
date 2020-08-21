@@ -5,6 +5,7 @@ const fs = require("fs");
 const ms = require("ms");
 const Canvas = require('canvas');
 const snekfetch = require('snekfetch');
+  let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"))
 const serverStats = {
     guildID: '746030108460056718',
     totalUsersID: '746082964839858247',
