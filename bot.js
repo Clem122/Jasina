@@ -4,9 +4,8 @@ const serverStats = {
     guildID: '746030108460056718',
     totalUsersID: '746082964839858247',
     memberCountID: '746082991230419005',
-    time: '746087399007977595',
     newUser: '746087439856173179'
-}
+};
 
 client.on('guildMemberAdd', member => {
     if (member.guild.id !== serverStats.guildID) return;
