@@ -37,8 +37,4 @@ client.on("ready", () => {
     client.user.setStatus("dnd");
 });
 
-client.on('ready', () => {
-    console.log('Siema byniu!');
-});
-
 client.login(process.env.BOT_TOKEN);
