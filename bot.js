@@ -347,4 +347,4 @@ client.on("ready", () => {
     client.user.setStatus("dnd");
 });
 
-client.login("OTIyMjgwMjQyODE3NjY3MDcz.Yb_KaQ.5dziXRUjYp-4vvVBCIp25psDDrA");
+client.login(process.env.BOT_TOKEN);
